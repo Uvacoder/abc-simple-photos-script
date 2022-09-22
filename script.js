@@ -25,7 +25,7 @@ getPhotos().then(photos => {
             let selectedPhotoSrc = photoImg.src.substr(0, photoImg.src.length - 7) + `300/300`
             let selectedPhoto = document.getElementById("my-selected-photo")
             selectedPhoto.src = selectedPhotoSrc
-            selectedPhoto.style.display = "online"
+            selectedPhoto.style.display = "inline"
         })
     })    
 })
