@@ -20,6 +20,7 @@ html, body {
 #my-selected-photo {
     width: 50%;
     margin: 20px auto;
+    display: none;
 }
 
 .par {

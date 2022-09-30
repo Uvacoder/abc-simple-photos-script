@@ -40,7 +40,7 @@ getPhotos().then((photos) => {
       
       
       topPhoto.src = photoImg.src;
-      // topPhoto.style.display = "inline";
+      topPhoto.style.display = "block";
     });
   });
 });
