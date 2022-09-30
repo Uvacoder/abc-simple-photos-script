@@ -12,17 +12,25 @@ html, body {
 .my-gallery {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex;
+    margin: auto 10rem;
+    justify-content: center;
+}
+
+.par {
+    text-align: center;
+    margin: 10px;
 }
 
 .my-photos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .my-photo {
     border: 0.1rem solid white;
     border-radius: 0.7rem;
     margin: 0.5rem;
+    width: 15%;
 }
