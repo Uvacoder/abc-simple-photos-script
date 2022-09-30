@@ -1,4 +1,3 @@
-let selectedPhoto = document.getElementById("my-selected-photo");
 
 async function getPhotos() {
   // let response = await fetch("photo.json");
@@ -24,26 +23,24 @@ function getMyPhotosHtml(photos) {
 getPhotos().then((photos) => {
   let myPhotosHtml = getMyPhotosHtml(photos);
   console.log(photos)
-  console.log(photos[4].largeImageURL)
   document.body.innerHTML = `<div class="my-gallery">
-        <img id="my-selected-photo" class="my-photo" src="${photos[4].largeImageURL}" />
-        <div class="par">All Images: Select anyone below to enlarge it</div>
+        <img id="my-selected-photo" class="my-photo" src="${photos[0].largeImageURL}" />
+        <div class="par">All Images: Select any images below to highlight</div>
         ${myPhotosHtml}
     </div>`;
 
   let myPhotoImgs = Array.from(document.getElementsByClassName("my-photo"));
+  let topPhoto = document.getElementById("my-selected-photo");
+
   myPhotoImgs.forEach((photoImg) => {
     photoImg.addEventListener("click", (e) => {
       
       console.log("here", photoImg.src)
       // get the selected photo src
-
-      // replace the top one
-      let selectedPhotoSrc =
-        photoImg.src.substr(0, photoImg.src.length - 7) + `300/300`;
       
-      selectedPhoto.src = selectedPhotoSrc;
-      // selectedPhoto.style.display = "inline";
+      
+      topPhoto.src = photoImg.src;
+      // topPhoto.style.display = "inline";
     });
   });
 });

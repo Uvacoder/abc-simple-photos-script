@@ -17,6 +17,11 @@ html, body {
     justify-content: center;
 }
 
+#my-selected-photo {
+    width: 50%;
+    margin: 20px auto;
+}
+
 .par {
     text-align: center;
     margin: 10px;
